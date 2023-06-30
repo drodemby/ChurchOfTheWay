@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+// import NavDropdown from 'react-bootstrap/Dropdown';
 import Link from 'next/link';
+import { Nav, NavDropdown } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
@@ -17,7 +19,7 @@ export default function NavBar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul className="navbar-nav me-auto">
+          <Nav className="navbar-nav me-auto">
             <li className="nav-item">
               <Link passHref href="/">
                 <a className="nav-link">
@@ -25,10 +27,38 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link passHref href="/">
+                <a className="nav-link">
+                  About
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <NavDropdown title="Ministries">
+                <NavDropdown.Item>Men</NavDropdown.Item>
+                <NavDropdown.Item>Women</NavDropdown.Item>
+                <NavDropdown.Item>Music</NavDropdown.Item>
+              </NavDropdown>
+            </li>
+            <li className="nav-item">
+              <Link passHref href="/">
+                <a className="nav-link">
+                  Social Media / Livestream
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link passHref href="/">
+                <a className="nav-link">
+                  Giving
+                </a>
+              </Link>
+            </li>
             <button type="button" className="btn btn-danger" onClick={signOut}>
               Sign Out
             </button>
-          </ul>
+          </Nav>
         </div>
       </div>
     </nav>
