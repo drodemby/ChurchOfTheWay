@@ -11,7 +11,7 @@ export default function NavBar() {
       <div className="container-fluid">
         <Link passHref href="/">
           <a className="navbar-brand" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-            CHANGE ME
+            MECHANGE
           </a>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link passHref href="/">
+              <Link passHref href="/about">
                 <a className="nav-link">
                   About
                 </a>
@@ -36,9 +36,9 @@ export default function NavBar() {
             </li>
             <li className="nav-item">
               <NavDropdown title="Ministries">
-                <NavDropdown.Item>Men</NavDropdown.Item>
-                <NavDropdown.Item>Women</NavDropdown.Item>
-                <NavDropdown.Item>Music</NavDropdown.Item>
+                <NavDropdown.Item passHref href="/men">Men</NavDropdown.Item>
+                <NavDropdown.Item href="/women">Women</NavDropdown.Item>
+                <NavDropdown.Item href="/music">Music</NavDropdown.Item>
               </NavDropdown>
             </li>
             <li className="nav-item">
@@ -49,7 +49,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link passHref href="/">
+              <Link passHref href="/giving">
                 <a className="nav-link">
                   Giving
                 </a>
